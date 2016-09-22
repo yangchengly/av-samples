@@ -9,7 +9,6 @@
 		</provider>
 		<class>com.avaya.ce.EliteCallControl.db.entity.MobileOwnership</class>
 		<class>com.avaya.ce.EliteCallControl.db.entity.Phonearea</class>
-		<class>com.avaya.ce.EliteCallControl.db.entity.ManagerUser</class>
 		<class>com.avaya.ce.EliteCallControl.db.entity.User</class>		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
