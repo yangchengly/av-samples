@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://archiveschemas.aus.avaya.com/properties"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://archiveschemas.aus.avaya.com/properties properties.xsd"
+	name="EliteCallControl" version="1.0.0.0.0" application="EliteCallControl-1.0.0.0.0">
+	<smgr>
+		<description>My Service</description>
+		<orig_order>1</orig_order>
+		<orig_group>1</orig_group>
+		<fs_component>true</fs_component>
+
+		<attribute name="outgoingCode">
+			<displayName>Outging Code</displayName>
+			<helpInfo>In some enterprise, it's required to add outgoing code to
+				dial outside call
+			</helpInfo>
+			<global>false</global>
+			<validation name="AnyString">
+				<type>STRING</type>
+			</validation>
+			<portlet_changeable>false</portlet_changeable>
+			<admin_visible>true</admin_visible>
+			<admin_changeable>true</admin_changeable>
+			<factory>
+				<value>9</value>
+				<user_changeable>true</user_changeable>
+			</factory>
+		</attribute>
+		
+		<attribute name="branchAreacodes">
+			<displayName>Area codes of your branches</displayName>
+			<helpInfo>Enter area code of cities where you have branches
+			</helpInfo>
+			<global>false</global>
+			<validation name="AnyString">
+				<type>STRING</type>
+			</validation>
+			<portlet_changeable>false</portlet_changeable>
+			<admin_visible>true</admin_visible>
+			<admin_changeable>true</admin_changeable>
+			<factory>
+				<value>010,021,022,023,0311,0351,0471,024,0411,0431,0451,025,0571,0551,0591,0791,0531,0532,0371,027,0731,020,0755,0769,0771,0772,028,0851,029</value>
+				<user_changeable>true</user_changeable>
+			</factory>
+		</attribute>
+
+		<!-- 
+		<attribute name="dbType">
+			<displayName>Database Type</displayName>
+			<helpInfo>Database Type can be either postgres or mysql. Default
+				postgres is used for WhiteList.
+			</helpInfo>
+			<global>false</global>
+			<validation name="AnyString">
+				<type>STRING</type>
+			</validation>
+			<portlet_changeable>false</portlet_changeable>
+			<admin_visible>true</admin_visible>
+			<admin_changeable>true</admin_changeable>
+			<factory>
+				<value>mysql</value>
+				<user_changeable>true</user_changeable>
+			</factory>
+		</attribute>
+
+		<attribute name="dbUrl">
+			<displayName>Database Url</displayName>
+			<helpInfo>Database Url which will be used to connect to the database.
+				The correct format for postgres is:
+				jdbc:postgresql://localhost/whitelist
+				The correct format for mysql
+				is:
+				jdbc:mysql://localhost/whitelist
+			</helpInfo>
+			<global>false</global>
+			<validation name="AnyString">
+				<type>STRING</type>
+			</validation>
+			<portlet_changeable>false</portlet_changeable>
+			<admin_visible>true</admin_visible>
+			<admin_changeable>true</admin_changeable>
+			<factory>
+				<value><![CDATA[jdbc:mysql://127.0.0.1:3306/ace?useUnicode=true&characterEncoding=UTF-8]]></value>
+				<user_changeable>true</user_changeable>
+			</factory>
+		</attribute>
+
+		<attribute name="dbUsername">
+			<displayName>Database Username</displayName>
+			<helpInfo>Database Username which will be used to connect to the
+				database.
+			</helpInfo>
+			<global>false</global>
+			<validation name="AnyString">
+				<type>STRING</type>
+			</validation>
+			<portlet_changeable>false</portlet_changeable>
+			<admin_visible>true</admin_visible>
+			<admin_changeable>true</admin_changeable>
+			<factory>
+				<value>root</value>
+				<user_changeable>true</user_changeable>
+			</factory>
+		</attribute>
+
+		<attribute name="dbPassword">
+			<displayName>Database Password</displayName>
+			<helpInfo>Database Password which will be used to connect to the
+				database.
+			</helpInfo>
+			<global>false</global>
+			<validation name="ArbitraryEncryptedString">
+				<type>ENCRYPTED_STRING</type>
+			</validation>
+			<admin_visible>true</admin_visible>
+			<admin_changeable>true</admin_changeable>
+			<factory>
+				<value>admin</value>
+				<user_changeable>true</user_changeable>
+			</factory>
+		</attribute>
+
+		<attribute name="maxActive">
+			<displayName>Database Max Active Connection</displayName>
+			<helpInfo>Max database connection.</helpInfo>
+			<global>false</global>
+			<validation name="AnyString">
+				<type>STRING</type>
+			</validation>
+			<portlet_changeable>false</portlet_changeable>
+			<admin_visible>true</admin_visible>
+			<admin_changeable>true</admin_changeable>
+			<factory>
+				<value>100</value>
+				<user_changeable>true</user_changeable>
+			</factory>
+		</attribute>
+
+		<attribute name="maxWait">
+			<displayName>Database Max Wait</displayName>
+			<helpInfo>Max wait.</helpInfo>
+			<global>false</global>
+			<validation name="AnyString">
+				<type>STRING</type>
+			</validation>
+			<portlet_changeable>false</portlet_changeable>
+			<admin_visible>true</admin_visible>
+			<admin_changeable>true</admin_changeable>
+			<factory>
+				<value>10000</value>
+				<user_changeable>true</user_changeable>
+			</factory>
+		</attribute>
+		 -->
+	</smgr>
+	<!-- <log_space>10MB</log_space> -->
+</service>
